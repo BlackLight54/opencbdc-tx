@@ -1,0 +1,4 @@
+-may put jmeter beside client, because calling from outside using 'docker exec' represents a major bottleneck
+-may call from outside, if there are multiple clients, and each has a reasonable ammopunt of wallets( how do we find this out?)
+-Or simply scale horizontally, and call one client from one thread with multiple threads from jmeter
+-may implement configuration of horizontal scaling
