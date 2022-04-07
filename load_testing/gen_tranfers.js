@@ -19,7 +19,7 @@ fs.readFile(process.argv[2], function(err, data) {
     const list = data.toString().replace(/\r\n/g,'\n').split('\n');
     if(process.argv.length > 4){
         var stream = fs.createWriteStream(process.argv[3]);
-        stream.write(`from_id,from_mempool,from_wallet,to_id,to_mempool,to_wallet,to_address\n`);
+        stream.write(`id,from_id,from_mempool,from_wallet,to_id,to_mempool,to_wallet,to_address\n`);
         for(let i = 0; i < process.argv[4]; i++){
             var [idx1, idx2] = getTwoNonIdenticalRandomInts(list.length -1);
             fromId = list[idx1].split(',')[0]
@@ -31,7 +31,7 @@ fs.readFile(process.argv[2], function(err, data) {
             toWallet = list[idx2].split(',')[2]
             toAddress = list[idx2].split(',')[3]
             
-            stream.write(`${fromId},${fromMempool},${fromWallet},${toId},${toMempool},${toWallet},${toAddress}\n`);
+            stream.write(`${i},${fromId},${fromMempool},${fromWallet},${toId},${toMempool},${toWallet},${toAddress}\n`);
         }
         stream.end();
     }    

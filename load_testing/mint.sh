@@ -1,24 +1,25 @@
 #!/bin/bash
-while [[ $# -gt 0 ]]; do
-  case $1 in
-    -r|--random)
-        RAND=true;
-        shift # past argument
-        ;;
-    -h|--help)
-        echo "Usage: ./mint.sh [OPTIONS]"
-        echo "Options:"
-        echo "  -r, --random: Random UTXO count and amount, max is argument"
-        echo "  -h, --help:  Show this message"
-        exit 0
-        ;;
-    
-  esac
+cd "$(dirname "$0")"
+cd ..
+remote=${remote:-false}
+
+while getopts c:v:w:r flag
+do
+    case "${flag}" in
+        w) wallet_csv=${OPTARG};;
+        c) numOfWallets=${OPTARG};;
+        v) amount=${OPTARG};;
+        r) RANDOM=true;;
+    esac
 done
-utxo_count=${1:-10}
-amount=${2:-10}
+
+utxo_count=${utxo_count:-10}
+amount=${amount:-10}
+wallet_csv=${wallet_csv:-"./load_testing/wallets.csv"}
+RANDOM=${RANDOM:-false}
+
 echo "Minting to each wallet..."
-cat wallets.csv | while read line; do
+cat ${wallet_csv} | while read line; do
     id=$(echo $line | cut -d',' -f1)
     mempool=$(echo $line | cut -d',' -f2)
     wallet=$(echo $line | cut -d',' -f3)
@@ -29,7 +30,15 @@ cat wallets.csv | while read line; do
     utxo_count=$((RANDOM%$utxo_count_max + 1))
     fi
     
-    echo "Minting $utxo_count UTXOs each worth ${amount}c to wallet$id... "
+    echo "Minting $utxo_count UTXOs each worth ${amount}c to wallet$id... " 
 
-    docker exec opencbdc-tx_client ./build/src/uhs/client/client-cli 2pc-compose.cfg $mempool $wallet mint  $utxo_count $amount 
+        if [ "$remote" == true ];
+        then  ./build/src/uhs/client/client-cli ./2pc-compose.cfg $mempool $wallet mint  $utxo_count $amount ;
+        else docker exec opencbdc-tx_client ./build/src/uhs/client/client-cli 2pc-compose.cfg $mempool $wallet mint  $utxo_count $amount  >> /dev/null;
+        fi
+
 done
+
+
+
+
