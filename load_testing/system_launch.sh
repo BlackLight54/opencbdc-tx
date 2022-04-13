@@ -50,10 +50,15 @@ dockerCompose(){
 }
    
 startClient(){
+SCRIPT=`realpath $0`
+SCRIPTPATH=`dirname $SCRIPT`
+SCRIPTPATH="$SCRIPTPATH/load_testing"
+
     echo "Removing old client..."
     docker rm -f opencbdc-tx_client && echo "Removed old client."
     echo "Starting client..."
-    docker run -d --network 2pc-network --name opencbdc-tx_client -p 1099:1099 -p 4000:4000 --mount type=bind,source="$(pwd)",target=/opt/tx-processor/load_testing -ti opencbdc-tx /bin/bash &&
+    echo $SCRIPTPATH
+    docker run -d --network 2pc-network --name opencbdc-tx_client -p 1099:1099 -p 4000:4000 --mount type=bind,source=$SCRIPTPATH,target=/opt/tx-processor/load_testing -ti opencbdc-tx /bin/bash &&
     echo "Client is up." &&    
     docker network connect bridge opencbdc-tx_client &&
     echo "Client is connected to bridge network."
