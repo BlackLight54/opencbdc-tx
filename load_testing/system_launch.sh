@@ -31,14 +31,16 @@ RESET=${RESET:-false};
 REBUILD=${REBUILD:-false};
 COMPOSE_FILE=${COMPOSE_FILE:-"docker-compose-2pc.yml"};
 cd ..
+echo "Starting service..."
 dockerBuild(){
     if [ "$REBUILD" == true ]; then
     echo "Building Docker container..."
-    docker build . -t opencbdc-tx  # build the container
+    docker build . -t opencbdc-tx   && # build the container
+    echo "Build Complete."
     fi
 }
 dockerCompose(){
-    echo "Starting service..."
+    
     echo "Running Docker-compose..."
     if [ "$RESET" == false ]; then
         docker-compose --file $COMPOSE_FILE up --detach || exit 1;
@@ -51,9 +53,8 @@ startClient(){
     echo "Removing old client..."
     docker rm -f opencbdc-tx_client && echo "Removed old client."
     echo "Starting client..."
-    docker run -d --network 2pc-network --name opencbdc-tx_client -p 1099:1099 -p 4000:4000 -ti opencbdc-tx /bin/bash &&
-    echo "Client is up."
-    
+    docker run -d --network 2pc-network --name opencbdc-tx_client -p 1099:1099 -p 4000:4000 --mount type=bind,source="$(pwd)",target=/opt/tx-processor/load_testing -ti opencbdc-tx /bin/bash &&
+    echo "Client is up." &&    
     docker network connect bridge opencbdc-tx_client &&
     echo "Client is connected to bridge network."
 }
