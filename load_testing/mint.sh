@@ -30,10 +30,10 @@ cat ${wallet_csv} | while read line; do
     utxo_count=$((RANDOM%$utxo_count_max + 1))
     fi
     
-    echo "Minting $utxo_count UTXOs each worth ${amount}c to wallet$id... " 
+    # echo "Minting $utxo_count UTXOs each worth ${amount}c to wallet$id... " 
 
         if [ "$remote" == true ];
-        then  ./build/src/uhs/client/client-cli ./2pc-compose.cfg $mempool $wallet mint  $utxo_count $amount ;
+        then  ./build/src/uhs/client/client-cli ./2pc-compose.cfg $mempool $wallet mint  $utxo_count $amount  >> /dev/null ;
         else docker exec opencbdc-tx_client ./build/src/uhs/client/client-cli 2pc-compose.cfg $mempool $wallet mint  $utxo_count $amount  >> /dev/null;
         fi
 
