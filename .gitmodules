@@ -2,3 +2,9 @@
 	path = 3rdparty/secp256k1
 	url = https://github.com/bitcoin-core/secp256k1.git
 	ignore = dirty
+[submodule "load_testing"]
+	path = load_testing
+	url = https://github.com/BlackLight54/OpenCBDCLoadTesting.git
+[submodule "src/uhs/client/JmeterCustomSampler"]
+	path = src/uhs/client/JmeterCustomSampler
+	url = https://github.com/BlackLight54/JmeterCustomSampler.git
