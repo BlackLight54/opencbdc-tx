@@ -210,7 +210,7 @@
         <boolProp name="recycle">true</boolProp>
         <stringProp name="shareMode">shareMode.all</stringProp>
         <boolProp name="stopThread">false</boolProp>
-        <stringProp name="variableNames">from_id,from_mempool,from_wallet,to_id,to_mempool,to_wallet,to_address</stringProp>
+        <stringProp name="variableNames">tx_id,from_id,from_mempool,from_wallet,to_id,to_mempool,to_wallet,to_address</stringProp>
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Wallet CSV Data Set Config" enabled="true">
@@ -239,7 +239,7 @@
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
-        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="Transaction" enabled="true">
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="Transaction" enabled="false">
           <boolProp name="SystemSampler.checkReturnCode">true</boolProp>
           <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
           <stringProp name="SystemSampler.command">docker</stringProp>
@@ -336,7 +336,7 @@ vars.get(&quot;importinput&quot;))</stringProp>
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="ImportInput" enabled="true">
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="ImportInput" enabled="false">
           <boolProp name="SystemSampler.checkReturnCode">true</boolProp>
           <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
           <stringProp name="SystemSampler.command">docker</stringProp>
@@ -416,7 +416,7 @@ vars.get(&quot;importinput&quot;))</stringProp>
           </JSR223PostProcessor>
           <hashTree/>
         </hashTree>
-        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="Sync wallets" enabled="true">
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="Sync wallets" enabled="false">
           <boolProp name="SystemSampler.checkReturnCode">true</boolProp>
           <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
           <stringProp name="SystemSampler.command">docker</stringProp>
@@ -470,7 +470,7 @@ vars.get(&quot;importinput&quot;))</stringProp>
           </elementProp>
         </SystemSampler>
         <hashTree/>
-        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="Check to balance" enabled="true">
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="Check to balance" enabled="false">
           <boolProp name="SystemSampler.checkReturnCode">true</boolProp>
           <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
           <stringProp name="SystemSampler.command">docker</stringProp>
@@ -524,7 +524,7 @@ vars.get(&quot;importinput&quot;))</stringProp>
           </elementProp>
         </SystemSampler>
         <hashTree/>
-        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="Check from balance" enabled="true">
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="Check from balance" enabled="false">
           <boolProp name="SystemSampler.checkReturnCode">true</boolProp>
           <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
           <stringProp name="SystemSampler.command">docker</stringProp>
@@ -578,7 +578,67 @@ vars.get(&quot;importinput&quot;))</stringProp>
           </elementProp>
         </SystemSampler>
         <hashTree/>
+        <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="Java Request" enabled="true">
+          <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="mempool to transfer the funds from" elementType="Argument">
+                <stringProp name="Argument.name">mempool to transfer the funds from</stringProp>
+                <stringProp name="Argument.value">${from_mempool}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="wallet to transfer the funds from" elementType="Argument">
+                <stringProp name="Argument.name">wallet to transfer the funds from</stringProp>
+                <stringProp name="Argument.value">${from_wallet}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="destination address" elementType="Argument">
+                <stringProp name="Argument.name">destination address</stringProp>
+                <stringProp name="Argument.value">${to_address}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="classname">hu.bme.mit.opencbdc.JMeterCustomSamplerOpenCBDCSend</stringProp>
+        </JavaSampler>
+        <hashTree/>
       </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>

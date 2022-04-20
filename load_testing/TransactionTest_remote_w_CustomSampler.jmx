@@ -256,7 +256,7 @@ vars.get(&quot;importinput&quot;))</stringProp>
           <stringProp name="SystemSampler.directory">${WORKDIR}</stringProp>
         </SystemSampler>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="1011882737">Ignoring non-spendable input</stringProp>
               <stringProp name="-1052771300">Invalid input encoding.</stringProp>
@@ -267,7 +267,7 @@ vars.get(&quot;importinput&quot;))</stringProp>
             <intProp name="Assertion.test_type">20</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="ImportLogger" enabled="false">
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="ImportLogger" enabled="true">
             <stringProp name="scriptLanguage">groovy</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
@@ -378,6 +378,29 @@ vars.get(&quot;importinput&quot;))</stringProp>
           </elementProp>
           <stringProp name="SystemSampler.directory">${WORKDIR}</stringProp>
         </SystemSampler>
+        <hashTree/>
+        <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="Java Request" enabled="true">
+          <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="FROM_mempool file relative path" elementType="Argument">
+                <stringProp name="Argument.name">FROM_mempool file relative path</stringProp>
+                <stringProp name="Argument.value">${from_mempool}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="FROM_mempool file relative path" elementType="Argument">
+                <stringProp name="Argument.name">FROM_mempool file relative path</stringProp>
+                <stringProp name="Argument.value">${from_mempool}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="destination address" elementType="Argument">
+                <stringProp name="Argument.name">destination address</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="classname">hu.bme.mit.opencbdc.JMeterCustomSamplerOpenCBDCSend</stringProp>
+        </JavaSampler>
         <hashTree/>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
