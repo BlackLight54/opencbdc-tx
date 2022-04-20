@@ -127,6 +127,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa75ad269110e2b216c9e834d1dcd4da4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcbdc_1_1transaction_1_1wallet.html#aa75ad269110e2b216c9e834d1dcd4da4">sign</a> (<a class="el" href="structcbdc_1_1transaction_1_1full__tx.html">full_tx</a> &amp;tx) const</td></tr>
 <tr class="memdesc:aa75ad269110e2b216c9e834d1dcd4da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signs each of the transaction's inputs using Schnorr signatures.  <a href="classcbdc_1_1transaction_1_1wallet.html#aa75ad269110e2b216c9e834d1dcd4da4">More...</a><br /></td></tr>
 <tr class="separator:aa75ad269110e2b216c9e834d1dcd4da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac107d98de6e878cd41d9662d42ec494f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcbdc_1_1transaction_1_1wallet.html#ac107d98de6e878cd41d9662d42ec494f">is_spendable</a> (const <a class="el" href="structcbdc_1_1transaction_1_1input.html">input</a> &amp;in) const -&gt; bool</td></tr>
+<tr class="memdesc:ac107d98de6e878cd41d9662d42ec494f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the input is spendable by the current wallet.  <a href="classcbdc_1_1transaction_1_1wallet.html#ac107d98de6e878cd41d9662d42ec494f">More...</a><br /></td></tr>
+<tr class="separator:ac107d98de6e878cd41d9662d42ec494f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeb0ef1e1a41f66249cd91ddc33d5c4e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcbdc_1_1transaction_1_1wallet.html#aeeb0ef1e1a41f66249cd91ddc33d5c4e">balance</a> () const -&gt; uint64_t</td></tr>
 <tr class="memdesc:aeeb0ef1e1a41f66249cd91ddc33d5c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total balance of the wallet, e.g.  <a href="classcbdc_1_1transaction_1_1wallet.html#aeeb0ef1e1a41f66249cd91ddc33d5c4e">More...</a><br /></td></tr>
 <tr class="separator:aeeb0ef1e1a41f66249cd91ddc33d5c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -497,6 +500,36 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacecbdc.html#a533bc462c81fe3193b0d4adb6b686064" title="Converts an std::array into an std::vector of the same size via copy." alt="" coords="421,56,532,83"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ac107d98de6e878cd41d9662d42ec494f" name="ac107d98de6e878cd41d9662d42ec494f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac107d98de6e878cd41d9662d42ec494f">&#9670;&nbsp;</a></span>is_spendable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cbdc::transaction::wallet::is_spendable </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcbdc_1_1transaction_1_1input.html">input</a> &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td> const -&gt; bool</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the input is spendable by the current wallet. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>the input to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="wallet_8cpp_source.html#l00536">536</a> of file <a class="el" href="wallet_8cpp_source.html">wallet.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="client_2client_8cpp_source.html#l00167">cbdc::client::import_send_input()</a>.</p>
 
 </div>
 </div>

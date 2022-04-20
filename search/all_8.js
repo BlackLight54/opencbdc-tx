@@ -16,7 +16,7 @@ var searchData=
   ['input_13',['input',['../structcbdc_1_1transaction_1_1input.html',1,'cbdc::transaction::input'],['../structcbdc_1_1transaction_1_1input.html#aa4c275ea0a96230b7671f3bd882115cb',1,'cbdc::transaction::input::input()']]],
   ['input_5ferror_14',['input_error',['../structcbdc_1_1transaction_1_1validation_1_1input__error.html',1,'cbdc::transaction::validation']]],
   ['input_5ferror_5fcode_15',['input_error_code',['../namespacecbdc_1_1transaction_1_1validation.html#af8901b9a4704070452981bca3ab05fbb',1,'cbdc::transaction::validation']]],
-  ['input_5ffrom_5foutput_16',['input_from_output',['../namespacecbdc_1_1transaction.html#a009ccb08edfcc1b3bd0dd1c96313a21b',1,'cbdc::transaction::input_from_output(const full_tx &amp;tx, size_t i) -&gt; std::optional&lt; input &gt;'],['../namespacecbdc_1_1transaction.html#a565b4f45e6f928ae432420f675fd3860',1,'cbdc::transaction::input_from_output(const full_tx &amp;tx, size_t i, const hash_t &amp;txid) -&gt; std::optional&lt; input &gt;']]],
+  ['input_5ffrom_5foutput_16',['input_from_output',['../namespacecbdc_1_1transaction.html#a565b4f45e6f928ae432420f675fd3860',1,'cbdc::transaction::input_from_output(const full_tx &amp;tx, size_t i, const hash_t &amp;txid) -&gt; std::optional&lt; input &gt;'],['../namespacecbdc_1_1transaction.html#a009ccb08edfcc1b3bd0dd1c96313a21b',1,'cbdc::transaction::input_from_output(const full_tx &amp;tx, size_t i) -&gt; std::optional&lt; input &gt;']]],
   ['input_5fuhs_5fids_17',['input_uhs_ids',['../classcbdc_1_1watchtower_1_1tx__error__inputs__dne.html#a254433c93f7ca8cc10f49072a909f8a5',1,'cbdc::watchtower::tx_error_inputs_dne::input_uhs_ids()'],['../classcbdc_1_1watchtower_1_1tx__error__inputs__spent.html#a3d86df6d4592c481c8a4eef09a302d74',1,'cbdc::watchtower::tx_error_inputs_spent::input_uhs_ids()']]],
   ['insert_18',['insert',['../classcbdc_1_1atomizer_1_1atomizer.html#a5a8972935b1b41827ce3bc3014646f1f',1,'cbdc::atomizer::atomizer']]],
   ['insert_5fcomplete_19',['insert_complete',['../classcbdc_1_1atomizer_1_1atomizer.html#ada1c32ec7d20f4ff7cefecb5f09b08fd',1,'cbdc::atomizer::atomizer']]],
@@ -27,7 +27,8 @@ var searchData=
   ['invalid_5fsignature_24',['invalid_signature',['../namespacecbdc_1_1transaction_1_1validation.html#ac7b86a1bd611afcfc7c94ef2ef0c4218a12c527ffd45868061a192960b352b5d9',1,'cbdc::transaction::validation']]],
   ['ip_5faddress_25',['ip_address',['../namespacecbdc_1_1network.html#a1f0c26822c339b5061990d1e4663d2ba',1,'cbdc::network']]],
   ['is_5fleader_26',['is_leader',['../classcbdc_1_1raft_1_1node.html#afe482635f025ff46a7c31c9f38d4d512',1,'cbdc::raft::node']]],
-  ['istream_5fserializer_27',['istream_serializer',['../classcbdc_1_1istream__serializer.html',1,'cbdc::istream_serializer'],['../classcbdc_1_1istream__serializer.html#a6a1e74a69da23d65e08200faf0bb0d8f',1,'cbdc::istream_serializer::istream_serializer()']]],
-  ['istream_5fserializer_2ecpp_28',['istream_serializer.cpp',['../istream__serializer_8cpp.html',1,'']]],
-  ['istream_5fserializer_2ehpp_29',['istream_serializer.hpp',['../istream__serializer_8hpp.html',1,'']]]
+  ['is_5fspendable_27',['is_spendable',['../classcbdc_1_1transaction_1_1wallet.html#ac107d98de6e878cd41d9662d42ec494f',1,'cbdc::transaction::wallet']]],
+  ['istream_5fserializer_28',['istream_serializer',['../classcbdc_1_1istream__serializer.html',1,'cbdc::istream_serializer'],['../classcbdc_1_1istream__serializer.html#a6a1e74a69da23d65e08200faf0bb0d8f',1,'cbdc::istream_serializer::istream_serializer()']]],
+  ['istream_5fserializer_2ecpp_29',['istream_serializer.cpp',['../istream__serializer_8cpp.html',1,'']]],
+  ['istream_5fserializer_2ehpp_30',['istream_serializer.hpp',['../istream__serializer_8hpp.html',1,'']]]
 ];

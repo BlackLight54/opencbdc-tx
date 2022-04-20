@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"structcbdc_1_1transaction_1_1output.html#adc225265e6ee723fdeed11229d03f7ce":[1,0,0,13,6,2],
+"structcbdc_1_1transaction_1_1output.html#af35c2d1149df08493e458f1647e56bd8":[1,0,0,13,6,4],
 "structcbdc_1_1transaction_1_1output.html#af35c2d1149df08493e458f1647e56bd8":[0,0,0,13,6,4],
 "structcbdc_1_1transaction_1_1validation_1_1input__error.html":[0,0,0,13,0,0],
 "structcbdc_1_1transaction_1_1validation_1_1input__error.html":[1,0,0,13,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "uhs_2transaction_2messages_8hpp.html#a2cca2c4ae0021c65c8b2725cfdb52148":[2,0,0,0,3,1,4],
 "uhs_2transaction_2messages_8hpp.html#a3ffb5b7be41f3dff422db374853072f3":[2,0,0,0,3,1,14],
 "uhs_2transaction_2messages_8hpp.html#a4fcd239ed4b336070898e92527d5eac7":[2,0,0,0,3,1,12],
-"uhs_2transaction_2messages_8hpp.html#a673764cbdeac348839b15a4cb02db81a":[2,0,0,0,3,1,2],
-"uhs_2transaction_2messages_8hpp.html#a7ad9b206283b1a5aaab783e0296b5d8f":[2,0,0,0,3,1,7],
-"uhs_2transaction_2messages_8hpp.html#a7c044bfd1646573730522d68933a2284":[2,0,0,0,3,1,13]
+"uhs_2transaction_2messages_8hpp.html#a673764cbdeac348839b15a4cb02db81a":[2,0,0,0,3,1,2]
 };
