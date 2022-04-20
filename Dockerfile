@@ -62,7 +62,6 @@ WORKDIR /opt/tx-processor
 
 # Copy source
 COPY . .
-COPY ../JmeterCustomSampler ./JmeterCustomSampler
 # Update submodules and run configure.sh
 RUN git submodule init && git submodule update
 
