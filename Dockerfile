@@ -15,7 +15,8 @@ RUN apt-get update && \
       lcov \ 
       iputils-ping \
       nodejs \
-      openjdk-8-jdk \
+      openjdk-11-jdk \
+      maven \
       git 
 
 # Args
@@ -29,7 +30,7 @@ RUN wget https://github.com/google/leveldb/archive/${LEVELDB_VERSION}.tar.gz && 
     tar xzvf ${LEVELDB_VERSION}.tar.gz && \
     rm -f ${LEVELDB_VERSION}.tar.gz && \
     cd leveldb-${LEVELDB_VERSION} && \
-    cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE} -DLEVELDB_BUILD_TESTS=0 -DLEVELDB_BUILD_BENCHMARKS=0 -DBUILD_SHARED_LIBS=0 . && \
+    cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE} -DLEVELDB_BUILD_TESTS=0 -DLEVELDB_BUILD_BENCHMARKS=0 -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DBUILD_SHARED_LIBS=0 . && \
     make -j$(nproc) && \
     make install
 
@@ -41,7 +42,7 @@ RUN wget https://github.com/eBay/NuRaft/archive/v${NURAFT_VERSION}.tar.gz && \
     ./prepare.sh && \
     mkdir build && \
     cd build && \
-    cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE} -DDISABLE_SSL=1 .. && \
+    cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE} -DDISABLE_SSL=1 -DCMAKE_POSITION_INDEPENDENT_CODE=ON .. && \
     make -j$(nproc) static_lib && \
     cp libnuraft.a /usr/local/lib && \
     cp -r ../include/libnuraft /usr/local/include 
@@ -60,10 +61,20 @@ ENV remote true
 # Set working directory
 WORKDIR /opt/tx-processor
 
+WORKDIR /opt/tx-processor/src/uhs/client/JmeterCustomSampler
+COPY src/uhs/client/JmeterCustomSampler/pom.xml .
+RUN mvn dependency:resolve
+WORKDIR /opt/tx-processor
+
 # Copy source
 COPY . .
 # Update submodules and run configure.sh
 RUN git submodule init && git submodule update
+WORKDIR /opt/tx-processor/src/uhs/client/JmeterCustomSampler
+RUN mvn package
+RUN cp /opt/tx-processor/src/uhs/client/JmeterCustomSampler/target/JmeterCustomSampler-1.0-SNAPSHOT.jar /opt/apache-jmeter-5.4.3/lib/ext/JmeterCustomSampler-1.0-SNAPSHOT.jar
+RUN javac -h . -cp target/classes /opt/tx-processor/src/uhs/client/JmeterCustomSampler/src/main/java/hu/bme/mit/opencbdc/OpenCBDCJavaClient.java
+WORKDIR /opt/tx-processor
 
 # Build binaries
 RUN mkdir build && \
