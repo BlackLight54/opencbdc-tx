@@ -34,6 +34,8 @@ find_library(NURAFT_LIBRARY nuraft REQUIRED)
 
 message("Disabling Run Time Type Information (RTTI) features.")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-rtti")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 include_directories(3rdparty 3rdparty/secp256k1/include)
 
@@ -58,7 +60,6 @@ add_subdirectory(3rdparty)
 add_compile_options(-Wall
                     -Wextra
                     -pedantic
-                    -Werror
                     -fno-exceptions)
 
 add_compile_definitions(_NO_EXCEPTION)
