@@ -1,9 +1,10 @@
 project(client)
+add_subdirectory(JmeterCustomSampler)
 
 add_library(client atomizer_client.cpp
                    client.cpp
                    twophase_client.cpp)
-
+target_include_directories(client PUBLIC ${CMAKE_CURRENT_LIST_DIR})
 add_executable(client-cli client-cli.cpp)
 target_link_libraries(client-cli client
                                  atomizer
