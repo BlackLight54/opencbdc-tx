@@ -9,6 +9,6 @@ var searchData=
   ['max_6',['max',['../classcbdc_1_1random__source.html#a613f09f4cf07eaf43b3f83b34f41bfc0',1,'cbdc::random_source']]],
   ['min_7',['min',['../classcbdc_1_1random__source.html#a4e9d424732ec79d1ffc73b0f704344ef',1,'cbdc::random_source']]],
   ['mint_8',['mint',['../classcbdc_1_1client.html#afcf817206595b55c80926c6efeb95a86',1,'cbdc::client']]],
-  ['mint_5fcommand_9',['mint_command',['../client-cli_8cpp.html#accdaf728cf67c681400bee24be079e6d',1,'client-cli.cpp']]],
+  ['mint_5fcommand_9',['mint_command',['../client-cli_8cpp.html#accdaf728cf67c681400bee24be079e6d',1,'mint_command(cbdc::client &amp;client, const std::vector&lt; std::string &gt; &amp;args) -&gt; bool:&#160;client-cli.cpp'],['../OpenCBDCJavaClient_8cpp.html#accdaf728cf67c681400bee24be079e6d',1,'mint_command(cbdc::client &amp;client, const std::vector&lt; std::string &gt; &amp;args) -&gt; bool:&#160;OpenCBDCJavaClient.cpp']]],
   ['mint_5fnew_5fcoins_10',['mint_new_coins',['../classcbdc_1_1transaction_1_1wallet.html#a74707315568d160c2130d74183b35c4b',1,'cbdc::transaction::wallet']]]
 ];

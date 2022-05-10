@@ -14,7 +14,7 @@ var searchData=
   ['pending_5ftxs_11',['pending_txs',['../classcbdc_1_1client.html#a6fec831beb2121296dff646a5b33301e',1,'cbdc::client']]],
   ['pop_12',['pop',['../classcbdc_1_1blocking__queue.html#aee9ad0be281a70877f05470aa25b09f8',1,'cbdc::blocking_queue']]],
   ['print_5famount_13',['print_amount',['../classcbdc_1_1client.html#aff758829cabeed3cb728a468f508082f',1,'cbdc::client']]],
-  ['print_5ftx_5fresult_14',['print_tx_result',['../client-cli_8cpp.html#a86cd5869e22f13d449855e968b8919b4',1,'client-cli.cpp']]],
+  ['print_5ftx_5fresult_14',['print_tx_result',['../client-cli_8cpp.html#a86cd5869e22f13d449855e968b8919b4',1,'print_tx_result(const std::optional&lt; cbdc::transaction::full_tx &gt; &amp;tx, const std::optional&lt; cbdc::sentinel::response &gt; &amp;resp, const cbdc::hash_t &amp;pubkey):&#160;client-cli.cpp'],['../OpenCBDCJavaClient_8cpp.html#a5eaa98ab3468e3b93b45ebc4ae8a4e29',1,'print_tx_result(const std::optional&lt; cbdc::transaction::full_tx &gt; &amp;tx, const std::optional&lt; cbdc::sentinel::response &gt; &amp;resp, const cbdc::hash_t &amp;pubkey):&#160;OpenCBDCJavaClient.cpp']]],
   ['pubkey_5ffrom_5fprivkey_15',['pubkey_from_privkey',['../namespacecbdc.html#aef77ae84c0c1123602cdfad838489b50',1,'cbdc']]],
   ['pump_16',['pump',['../classcbdc_1_1network_1_1connection__manager.html#a1025f2bb329de37a914c63243c13ca64',1,'cbdc::network::connection_manager']]],
   ['push_17',['push',['../classcbdc_1_1blocking__queue.html#a545725ae9c7b4643d91d690b05d9d2f0',1,'cbdc::blocking_queue']]],

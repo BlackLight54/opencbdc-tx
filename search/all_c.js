@@ -105,7 +105,7 @@ var searchData=
   ['message_5ft_102',['message_t',['../structcbdc_1_1network_1_1message__t.html',1,'cbdc::network']]],
   ['min_103',['min',['../classcbdc_1_1random__source.html#a4e9d424732ec79d1ffc73b0f704344ef',1,'cbdc::random_source']]],
   ['mint_104',['mint',['../classcbdc_1_1client.html#afcf817206595b55c80926c6efeb95a86',1,'cbdc::client']]],
-  ['mint_5fcommand_105',['mint_command',['../client-cli_8cpp.html#accdaf728cf67c681400bee24be079e6d',1,'client-cli.cpp']]],
+  ['mint_5fcommand_105',['mint_command',['../client-cli_8cpp.html#accdaf728cf67c681400bee24be079e6d',1,'mint_command(cbdc::client &amp;client, const std::vector&lt; std::string &gt; &amp;args) -&gt; bool:&#160;client-cli.cpp'],['../OpenCBDCJavaClient_8cpp.html#accdaf728cf67c681400bee24be079e6d',1,'mint_command(cbdc::client &amp;client, const std::vector&lt; std::string &gt; &amp;args) -&gt; bool:&#160;OpenCBDCJavaClient.cpp']]],
   ['mint_5fnew_5fcoins_106',['mint_new_coins',['../classcbdc_1_1transaction_1_1wallet.html#a74707315568d160c2130d74183b35c4b',1,'cbdc::transaction::wallet']]],
   ['missing_5fwitness_107',['missing_witness',['../namespacecbdc_1_1transaction_1_1validation.html#a982f8b38fb4c9ffa56d315d81a38860faa1b764a27465a1db8a0c63ee41edd06b',1,'cbdc::transaction::validation']]],
   ['missing_5fwitness_5fprogram_5ftype_108',['missing_witness_program_type',['../namespacecbdc_1_1transaction_1_1validation.html#ac7b86a1bd611afcfc7c94ef2ef0c4218afb53ec7d82b1dbf1f16aeae741c6ca29',1,'cbdc::transaction::validation']]]

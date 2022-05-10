@@ -1,7 +1,7 @@
 var searchData=
 [
   ['fan_0',['fan',['../classcbdc_1_1client.html#a1628f43d8c0ec97cf7837e64cf36f0f8',1,'cbdc::client::fan()'],['../classcbdc_1_1transaction_1_1wallet.html#ad2549676db34c147021cde3a13a4ddc5',1,'cbdc::transaction::wallet::fan()']]],
-  ['fan_5fcommand_1',['fan_command',['../client-cli_8cpp.html#afcf4411eed8031177b7f28f99f81f8ac',1,'client-cli.cpp']]],
+  ['fan_5fcommand_1',['fan_command',['../client-cli_8cpp.html#afcf4411eed8031177b7f28f99f81f8ac',1,'fan_command(cbdc::client &amp;client, const std::vector&lt; std::string &gt; &amp;args) -&gt; bool:&#160;client-cli.cpp'],['../OpenCBDCJavaClient_8cpp.html#afcf4411eed8031177b7f28f99f81f8ac',1,'fan_command(cbdc::client &amp;client, const std::vector&lt; std::string &gt; &amp;args) -&gt; bool:&#160;OpenCBDCJavaClient.cpp']]],
   ['fatal_2',['fatal',['../classcbdc_1_1logging_1_1log.html#a96aad468d40ed5781e76c15f9dbae264',1,'cbdc::logging::log']]],
   ['findshortestseparator_3',['FindShortestSeparator',['../classcbdc_1_1raft_1_1index__comparator.html#a00fefe0bfbdf8d6896af9a02bcc50fd8',1,'cbdc::raft::index_comparator']]],
   ['findshortsuccessor_4',['FindShortSuccessor',['../classcbdc_1_1raft_1_1index__comparator.html#a1e5af5bb4012b6ee31280873709937a2',1,'cbdc::raft::index_comparator']]],

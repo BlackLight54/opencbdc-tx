@@ -1,11 +1,13 @@
 var OpenCBDCJavaClient_8cpp =
 [
-    [ "Java_hu_bme_mit_opencbdc_OpenCBDCJavaClient_confirmTx", "OpenCBDCJavaClient_8cpp.html#a170d81dc82590ff3939275720faea78b", null ],
-    [ "Java_hu_bme_mit_opencbdc_OpenCBDCJavaClient_fan", "OpenCBDCJavaClient_8cpp.html#a7a720970550232b55874f1e407dc6bbc", null ],
-    [ "Java_hu_bme_mit_opencbdc_OpenCBDCJavaClient_importInput", "OpenCBDCJavaClient_8cpp.html#a1f050532773b3b0de610028c4dd25347", null ],
-    [ "Java_hu_bme_mit_opencbdc_OpenCBDCJavaClient_info", "OpenCBDCJavaClient_8cpp.html#afe14568007e36ac0e072ad00b2f6c7b5", null ],
-    [ "Java_hu_bme_mit_opencbdc_OpenCBDCJavaClient_mint", "OpenCBDCJavaClient_8cpp.html#aa881aaa79c9bbe8f9cb3d61caabe15f8", null ],
-    [ "Java_hu_bme_mit_opencbdc_OpenCBDCJavaClient_newAddress", "OpenCBDCJavaClient_8cpp.html#ac901a6e68a097ad872276842998ffea9", null ],
+    [ "call", "OpenCBDCJavaClient_8cpp.html#ad068f79b7985896d4d283ecf6ba00684", null ],
+    [ "confirmtx_command", "OpenCBDCJavaClient_8cpp.html#ab721ec6eb091ad83ae95371156a2239d", null ],
+    [ "decode_address", "OpenCBDCJavaClient_8cpp.html#ac1723efebee1f37b0b8f4ff1787cf34e", null ],
+    [ "fan_command", "OpenCBDCJavaClient_8cpp.html#afcf4411eed8031177b7f28f99f81f8ac", null ],
+    [ "importinput_command", "OpenCBDCJavaClient_8cpp.html#aeed4f46ae9772a4898f8b880fe06675f", null ],
     [ "Java_hu_bme_mit_opencbdc_OpenCBDCJavaClient_send", "OpenCBDCJavaClient_8cpp.html#ab28c07d1078d051a477e833c26dfca65", null ],
-    [ "Java_hu_bme_mit_opencbdc_OpenCBDCJavaClient_sync", "OpenCBDCJavaClient_8cpp.html#a4ef84b3169806c510e448f1f2b932a01", null ]
+    [ "mint_command", "OpenCBDCJavaClient_8cpp.html#accdaf728cf67c681400bee24be079e6d", null ],
+    [ "newaddress_command", "OpenCBDCJavaClient_8cpp.html#ad783cb0cb4e4184edcd5fb3a71d98377", null ],
+    [ "print_tx_result", "OpenCBDCJavaClient_8cpp.html#a5eaa98ab3468e3b93b45ebc4ae8a4e29", null ],
+    [ "send_command", "OpenCBDCJavaClient_8cpp.html#a8f57fc9ecb3681d96ef3f40a2c1102a0", null ]
 ];
