@@ -62,18 +62,18 @@ ENV remote true
 WORKDIR /opt/tx-processor
 
 WORKDIR /opt/tx-processor/src/uhs/client/JmeterCustomSampler
-COPY src/uhs/client/JmeterCustomSampler/pom.xml .
-RUN mvn dependency:resolve
+COPY src/uhs/client/JmeterCustomSampler/pom.xml ./pom.xml
+RUN mvn verify clean 
+COPY src/uhs/client/JmeterCustomSampler .
+RUN mvn package 
+RUN cp /opt/tx-processor/src/uhs/client/JmeterCustomSampler/target/JmeterCustomSampler-1.0-SNAPSHOT.jar /opt/apache-jmeter-5.4.3/lib/ext/JmeterCustomSampler-1.0-SNAPSHOT.jar
+RUN javac -h . -cp target/classes /opt/tx-processor/src/uhs/client/JmeterCustomSampler/src/main/java/hu/bme/mit/opencbdc/OpenCBDCJavaClient.java
 WORKDIR /opt/tx-processor
 
 # Copy source
 COPY . .
 # Update submodules and run configure.sh
-RUN git submodule init && git submodule update
-WORKDIR /opt/tx-processor/src/uhs/client/JmeterCustomSampler
-RUN mvn package
-RUN cp /opt/tx-processor/src/uhs/client/JmeterCustomSampler/target/JmeterCustomSampler-1.0-SNAPSHOT.jar /opt/apache-jmeter-5.4.3/lib/ext/JmeterCustomSampler-1.0-SNAPSHOT.jar
-RUN javac -h . -cp target/classes /opt/tx-processor/src/uhs/client/JmeterCustomSampler/src/main/java/hu/bme/mit/opencbdc/OpenCBDCJavaClient.java
+RUN git submodule init && git submodule update --merge
 WORKDIR /opt/tx-processor
 
 # Build binaries
