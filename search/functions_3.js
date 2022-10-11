@@ -3,7 +3,7 @@ var searchData=
   ['data_0',['data',['../classcbdc_1_1buffer.html#a720c9a8681156418c0cd3f9148a66fa4',1,'cbdc::buffer::data() const -&gt; const void *'],['../classcbdc_1_1buffer.html#a06b7affff5f9d9cd9845c7a78d72ec76',1,'cbdc::buffer::data() -&gt; void *']]],
   ['data_5fat_1',['data_at',['../classcbdc_1_1buffer.html#a9cd57eb343757f12ec5d0a473291428a',1,'cbdc::buffer::data_at(size_t offset) -&gt; void *'],['../classcbdc_1_1buffer.html#abd6f8b2b42962484d285159957262243',1,'cbdc::buffer::data_at(size_t offset) const -&gt; const void *']]],
   ['debug_2',['debug',['../classcbdc_1_1logging_1_1log.html#a7fe252ea20782de485b3e231a084047c',1,'cbdc::logging::log']]],
-  ['decode_5faddress_3',['decode_address',['../client-cli_8cpp.html#ac1723efebee1f37b0b8f4ff1787cf34e',1,'client-cli.cpp']]],
+  ['decode_5faddress_3',['decode_address',['../OpenCBDCJavaClient_8cpp.html#ac1723efebee1f37b0b8f4ff1787cf34e',1,'decode_address(const std::string &amp;addr_str) -&gt; std::optional&lt; cbdc::hash_t &gt;:&#160;OpenCBDCJavaClient.cpp'],['../client-cli_8cpp.html#ac1723efebee1f37b0b8f4ff1787cf34e',1,'decode_address(const std::string &amp;addr_str) -&gt; std::optional&lt; cbdc::hash_t &gt;:&#160;client-cli.cpp']]],
   ['deserialize_4',['deserialize',['../classcbdc_1_1atomizer_1_1atomizer.html#ac5a90e73fa482ad54131d373f0989ec6',1,'cbdc::atomizer::atomizer']]],
   ['deserialize_5frequest_5',['deserialize_request',['../classcbdc_1_1rpc_1_1server.html#ab2562ea21975c38ae466a694e65a91c9',1,'cbdc::rpc::server']]],
   ['deserialize_5fresponse_6',['deserialize_response',['../classcbdc_1_1rpc_1_1client.html#a79427687f2719fd3839d47cd73fa1480',1,'cbdc::rpc::client']]],
